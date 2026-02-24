@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>For My Forever ❤️</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fff0f5, #ffe4e1);
+            overflow-x: hidden;
+        }
+
+        section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        h1,
+        h2 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .home-box {
+            background: white;
+            width: 85%;
+            margin: auto;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .circle-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #ffb6c1;
+        }
+
+        .circle-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .love-btn {
+            padding: 12px 25px;
+            background: black;
+            color: gold;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .love-btn:hover {
+            background: gold;
+            color: black;
+        }
+
+        .story {
+            background: #fff;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            width: 220px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .gallery img {
+            width: 250px;
+            border-radius: 15px;
+            transition: 0.4s;
+            margin: 10px;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .proposal {
+            background: black;
+            color: gold;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        .proposal button {
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        #yesBtn {
+            background: gold;
+            color: black;
+        }
+
+        #noBtn {
+            background: white;
+        }
+
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: gold;
+            top: -10px;
+            animation: fall 3s linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div class="home-box">
+            <div class="circle-img">
+                <img src="./assets/imag3.jpeg">
+            </div>
+
+            <div>
+                <h1>Our Beautiful Story 💕</h1>
+                <p>From Nikkah January 2024… to Mehndi 2025… to that one Insta text that changed everything ❤️</p>
+                <button class="love-btn" onclick="scrollToStory()">Read Our Story</button>
+            </div>
+
+            <div class="circle-img">
+                <img src="./assets/himm.jpeg">
+            </div>
+        </div>
+    </section>
+
+    <section class="story" id="story">
+        <h2>How We Met 💞</h2>
+        <p>
+            It all started at my cousin’s nikkah in January 2024…
+            I saw you there… and from that day, you were the only one I liked 🥺
+
+            Then came the wedding 2025 mehndi…
+            You looked at me… I felt that attraction…
+            And maybe destiny felt it too.
+
+            On barat night… I gathered courage and texted you on Instagram:
+            “Excuse me…”
+
+            You said “What?”
+            I asked why you were looking at me 😌
+            Thora sa attitude bhi dikhaya 😂
+            And from 12 November… our story officially began.
+        </p>
+
+        <h2>Our First Fight 😂</h2>
+        <p>Over late replies… because I wanted attention 😤❤️</p>
+
+        <h2>First "I Love You"</h2>
+        <p>I said it first… because I couldn’t hold it anymore 💕</p>
+    </section>
+
+    <section>
+        <h2>Why I Love You 💖</h2>
+        <div class="cards">
+            <div class="card">💖 You protect me</div>
+            <div class="card">💖 You understand my mood swings</div>
+            <div class="card">💖 You respect me</div>
+            <div class="card">💖 You pray for us</div>
+            <div class="card">💖 You are my peace</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Our Memories 📸</h2>
+        <div class="gallery">
+            <img src="./assets/img.jpeg">
+            <img src="./assets/us.jpeg">
+            <img src="./assets/img2.jpeg">
+        </div>
+        <p>Every picture holds a piece of my heart ❤️</p>
+    </section>
+
+    <section>
+        <h2>Counting days until I call you my husband officially… ⏳</h2>
+        <div id="countdown"></div>
+    </section>
+
+    <section class="proposal">
+        <h1>Will you be my forever? 💍</h1>
+        <h2>Will you marry me?</h2>
+
+        <button id="yesBtn">❤️ YES</button>
+        <button id="noBtn">😅 NO</button>
+    </section>
+
+    <script>
+
+        function scrollToStory() {
+            document.getElementById("story").scrollIntoView({ behavior: "smooth" });
+        }
+
+        let noBtn = document.getElementById("noBtn");
+
+        noBtn.addEventListener("mouseover", function () {
+            noBtn.style.position = "absolute";
+            noBtn.style.top = Math.random() * 400 + "px";
+            noBtn.style.left = Math.random() * 400 + "px";
+        });
+
+        document.getElementById("yesBtn").addEventListener("click", function () {
+            alert("He said YES!!! 💍❤️");
+
+            for (let i = 0; i < 100; i++) {
+                let confetti = document.createElement("div");
+                confetti.classList.add("confetti");
+                confetti.style.left = Math.random() * 100 + "vw";
+                confetti.style.animationDuration = Math.random() * 3 + 2 + "s";
+                document.body.appendChild(confetti);
+            }
+        });
+
+        let countDate = new Date("December 31, 2026 00:00:00").getTime();
+        let x = setInterval(function () {
+            let now = new Date().getTime();
+            let distance = countDate - now;
+            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            document.getElementById("countdown").innerHTML = days + " Days Left ❤️";
+        }, 1000);
+
+    </script>
+
+</body>
+
+</html>
